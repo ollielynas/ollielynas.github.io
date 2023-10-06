@@ -1,2 +1,4 @@
 
 *.stackdump
+/uname.exe.stackdump
+uname.exe.stackdump
