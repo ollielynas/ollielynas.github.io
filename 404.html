@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>404</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        font-family: 'Fira Code', monospace;
+    flex-direction: column;
+}
+
+.container1 {
+    display: flex;
+    padding: 1em;
+    border: 1px rgba(87, 87, 87, 0.563) solid;
+    margin: 2em;
+    border-radius: 1em;
+    background-color: rgba(245, 245, 220, 0.345);
+    justify-content: left;
+    max-height: 40vh;
+    flex-direction: column;
+}
+
+
+    </style>
+    <h1>404</h1>
+    <br>
+    <p class="ital">could not find: </p><a id = "link-me"></a>
+    <div class = "container1">
+        Perhaps you meant one of these
+        <a href="https://ollielynas.github.io">https://ollielynas.github.io</a>
+        <a href="https://ollielynas.github.io/md-website/">...ollielynas.../md-website</a>
+        <a href="https://ollielynas.github.io/password-game-clone/">https://ollielynas.github.io/password-game-clone/</a>
+        <a href="https://ollielynas.github.io/crossword/">https://ollielynas.github.io/crossword/</a>
+        <a href="https://ollielynas.github.io/Fortran-1/">https://ollielynas.github.io/Fortran-1/</a>
+     </div>
+
+<script>
+    let l = document.getElementById("link-me");
+    l.innerText = document.referrer;
+    l.setAttribute("href", document.referrer);
+    console.log(document.referrer)
+</script>
+</body>
+</html>
