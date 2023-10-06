@@ -47,9 +47,8 @@ body {
 
 <script>
     let l = document.getElementById("link-me");
-    l.innerText = document.referrer;
-    l.setAttribute("href", document.referrer);
-    console.log(document.referrer)
+    l.innerText = window.location.href;
+    l.setAttribute("href", window.location.href);
 </script>
 </body>
 </html>
