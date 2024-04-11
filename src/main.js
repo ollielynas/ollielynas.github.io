@@ -1,3 +1,5 @@
+window.location.replace("https://ollielynas.github.io/md-website/#md_files/home.md");
+
 
 let links = document.getElementById('links');
 let thing = document.querySelector(".thing");
