@@ -1,3 +1,4 @@
+
 window.location.replace("https://ollielynas.github.io/md-website/#md_files/home.md");
 
 
