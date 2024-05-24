@@ -125,9 +125,9 @@ impl Boid {
     fn new_random(area_size: f32) -> Boid {
         Boid {
             pos: Vec3A::new(
-                (fastrand::f32() - 0.5) * area_size * 10.0,
-                (fastrand::f32() - 0.5) * area_size * 10.0,
-                (fastrand::f32() - 0.5) * area_size * 10.0,
+                (fastrand::f32() - 0.5) * area_size * 3.0,
+                (fastrand::f32() - 0.5) * area_size * 3.0,
+                (fastrand::f32() - 0.5) * area_size * 3.0,
             ),
             velocity: Vec3A::new(
                 fastrand::f32() - 0.5,
