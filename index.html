@@ -30,8 +30,8 @@
   <link rel="icon" href="https://ollielynas.github.io/favicon.ico" type="image/x-icon">
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  
-
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+ 
 
 
   <!-- Mobile Specific Metas
@@ -40,12 +40,14 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+    
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <!-- <link rel="stylesheet" href="css/splen.css"> -->
+  <style>
+
+</style>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,25 +55,53 @@
 
 </head >
 <body page="home">
+  <canvas id="glcanvas" tabindex='1'></canvas>
+    <!-- Minified and statically hosted version of https://github.com/not-fl3/macroquad/blob/master/js/mq_js_bundle.js -->
+    <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script>
+    <script>load("render/target/wasm32-unknown-unknown/release/render.wasm");</script> <!-- Your compiled wasm file -->
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row home">
-      <div class="one-half column" style="margin-top: 25%">
-        <div>
-        <h2>Ollie Lynas</h2>
-        <!-- <div class="blue_line"></div> -->
-      </div>
-      <div class = "ten columns">
 
-        <button onclick="document.body.setAttribute('page','page1');window.location.replace('https://ollielynas.github.io/md-website/#md_files/home.md');
-        ">begin</button>
-    </div>
-    </div>
+
+  <div class="links">
+    <a href="https://github.com/ollielynas"><img alt="Link to GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
+    <a href="https://ollie-lynas.itch.io/"><img alt="Link to Itch.io" src="https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&amp;logo=Itch.io&amp;logoColor=white"></a>
+    <button class="continue" onclick="document.body.setAttribute('more', 'true')">More...</button>
   </div>
+  
+  
+  <div class="content">
+    
+    <div class="box" style="grid-column: 2/5;grid-row: 1/2;">
+      <a href="https://github.com/ollielynas">
+        <img src="https://myreadme.vercel.app/api/embed/ollielynas?panels=userstatistics,toprepositories,toplanguages,commitgraph" alt="summary of my github activity" onload="document.getElementById('remove-me1').style.color = 'transparent'">
+    </a>
+    </div>
+    <div class="box" style="grid-column: 5/7;grid-row: 1/3; overflow:hidden">
+      <a href="https://ollielynas.com/md-website/#md_files/home.md">
+        <img src="images/Screenshot 2024-05-24 at 20-44-28 Ollie Lynas Portfolio.png" alt="summary of my github activity" onload="document.getElementById('remove-me1').style.color = 'transparent'">
+        <p style="color: rgb(29, 29, 29); text-align: center; margin: 0; width: 100%; height: 1.2em;padding: 0.1em; background-color: rgba(255, 255, 255, 0.666);transform: translate(0,-100%);">Old Site</p>
+      </a>
+    </div>
+    <div class="box" style="grid-row: 2/4;grid-column: 2/4;">
+      <h4>About me</h4>
+      I cant think of anything to put here
+    </div>
+    <div class="box" style="grid-row: 2/3;grid-column: 4/5; padding-left: 0.8em; padding-right: 0.8em;">
+      <a href="https://ollie-lynas.itch.io/"><img style=" border-radius: 0;" alt="Link to Itch.io" src="https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&amp;logo=Itch.io&amp;logoColor=white"></a>
+      <a href="https://github.com/ollielynas"><img style=" border-radius: 0;" alt="Link to GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
+      
+    </div>
+    <div class="box" style="grid-row: 3/4;grid-column: 4/6; padding-left: 0.8em; padding-right: 0.8em;">
+      <a href="https://www.auckland.ac.nz/en/about-us/about-the-university.html"><img style=" border-radius: 0;" alt="Link to UOA" src="https://icons.auckland.ac.nz/assets/logos/uoa/horizontal/uoa_logo.svg"></a>      
+    </div>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <div class="box" style="grid-row: 3/5;grid-column: 6/7; padding-left: 0.8em; padding-right: 0.8em;">
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ollie-lynas-75b074294" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://nz.linkedin.com/in/ollie-lynas-75b074294?trk=profile-badge">Ollie Lynas</a></div>
+    </div> -->
+    </div>
+    </div>
+    
+
 </body>
 </html>
