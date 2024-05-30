@@ -13,6 +13,7 @@
     /* border: 1px black solid; */
     opacity: 1;
     transition: all 0.5s;
+    z-index: 2;
 }
 
 
@@ -69,7 +70,7 @@ canvas {
     overflow: hidden;
     position: absolute;
     background: rgb(255, 255, 255);
-    z-index: 0;
+    z-index: 1;
     scale: 1.0;
     transition: all 0.5s;
 }
@@ -92,6 +93,8 @@ body[more="true"] {
     flex-wrap: wrap;
     gap: 1em;
     padding-bottom: 8em;
+    z-index: -2;
+
 }
 
 @media all and (orientation:portrait) {
