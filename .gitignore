@@ -2,3 +2,4 @@
 *.stackdump
 /uname.exe.stackdump
 uname.exe.stackdump
+/render/target/debug
