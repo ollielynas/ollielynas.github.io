@@ -1,141 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-  <!-- <meta http-equiv="refresh" content="0; URL=https://ollielynas.com/md-website/#md_files/home.md" /> -->
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Ollie Lynas</title>
-  
-  <!-- <meta name="google-site-verification" content="pZW8Y0wZQ9V6d0UkJjpkXDTb1AASfBlvDaHjr1o6AN8" /> -->
-  
+  <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta  name="description" content="A portfolio website for Ollie Lynas / Oliver Lynas containing a portfolio of projects which demonstrate a range of software engineering skills">
-  <meta property="og:site_name" content="Ollie Lynas" />
-  
-  <meta property="og:image" content="https://ollielynas.com/preview.png" />
-  <meta property="twitter:image" content="https://ollielynas.com/preview.png" />
-  
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1206" />
-  <meta property="og:image:height" content="622" />
-  
-  <meta property="og:title" content="Ollie Lynas" />
-  <meta property="twitter:title" content="Ollie Lynas" />
-  
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  
-  
-
-    
-  <meta property="og:description" content="A portfolio website for Ollie Lynas / Oliver Lynas containing a portfolio of projects which demonstrate a range of software engineering skills" />
-  <meta property="twitter:description" content="A portfolio website for Ollie Lynas / Oliver Lynas containing a portfolio of projects which demonstrate a range of software engineering skills" />
-
+  <title>Ollie Lynas</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link async rel='stylesheet' type='text/css' media='screen' href='src/main.css'>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta http-equiv="Content-Security-Policy" content="sandbox" />
-  
-  <link rel="shortcut icon" href="https://ollielynas.com/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="https://ollielynas.com/favicon.ico" type="image/x-icon">
-  <!-- <script src="https://unpkg.com/@phosphor-icons/web"></script> -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
- 
-  <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Ollie Lynas",
-        "alternateName" : ["Ollie Lynas", "Ollie", "ollielynas.com", "OllieLynas","ollielynas", "Oliver Lynas"],
-        "description": "A portfolio website for Ollie Lynas / Oliver Lynas containing a portfolio of projects which demonstrate a range of software engineering skills",
-  "url": "https://ollielynas.com/",
-  "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-          "@type": "EntryPoint",
-      "urlTemplate": "ollielynas.com/md-website/search.html?search={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-}
-}
-</script>
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
-    
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="stylesheet" href="css/splen.css"> -->
-  <style>
-
-</style>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head >
-<body page="home">
-  <canvas id="glcanvas" tabindex='1'></canvas>
-    <!-- Minified and statically hosted version of https://github.com/not-fl3/macroquad/blob/master/js/mq_js_bundle.js -->
-    <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script>
-    <script>load("render/target/wasm32-unknown-unknown/release/render.wasm");</script> <!-- Your compiled wasm file -->
-
-
-
-  <div class="links">
-    <a href="https://github.com/ollielynas"><img alt="Link to GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
-    <a href="https://ollie-lynas.itch.io/"><img alt="Link to Itch.io" src="https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&amp;logo=Itch.io&amp;logoColor=white"></a>
-    <button class="continue" onclick="document.body.setAttribute('more', 'true')">More...</button>
-  </div>
-  
-  
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <!-- <script src='main.js'></script> -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
   <div class="content">
-    
-    <div class="box" style="grid-column: 2/5;grid-row: 1/2;">
-      <a href="https://github.com/ollielynas">
-        <img src="https://myreadme.vercel.app/api/embed/ollielynas?panels=userstatistics,toprepositories,toplanguages,commitgraph" alt="summary of my github activity" onload="document.getElementById('remove-me1').style.color = 'transparent'">
+    <div class="row">
+    <div class="title">
+      <h1>Ollie Lynas</h1>
+  </div>
+  <div class="links">
+    <a href = "https://github.com/ollielynas" class="ph ph-github-logo"></a>
+    <a href = "https://www.linkedin.com/in/ollie-lynas-75b074294/" class="ph ph-linkedin-logo"></a>
+    <a href = "https://ollie-lynas.itch.io/">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 245.371 220.736"><path fill="#303030" d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08C57.534 94.073 72.867 94.073 76.7 94.073zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" color="#303030"/></svg>
     </a>
-    </div>
-    <div class="box" style="grid-column: 5/7;grid-row: 1/3; overflow:hidden">
-      <a href="https://ollielynas.com/md-website/#md_files/home.md">
-        <img src="images/Screenshot 2024-05-24 at 20-44-28 Ollie Lynas Portfolio.png" alt="summary of my github activity" onload="document.getElementById('remove-me1').style.color = 'transparent'">
-        <p style="color: rgb(29, 29, 29); text-align: center; margin: 0; width: 100%; height: 1.2em;padding: 0.1em; background-color: rgba(255, 255, 255, 0.666);transform: translate(0,-100%);">Old Site</p>
-      </a>
-    </div>
-    <div class="box" style="grid-row: 2/4;grid-column: 2/4;">
-      <h4>About me</h4>
-      I cant think of anything to put here
-    </div>
-    <div class="box" style="grid-row: 2/3;grid-column: 4/5; padding-left: 0.8em; padding-right: 0.8em;">
-      <a href="https://ollie-lynas.itch.io/"><img style=" border-radius: 0;" alt="Link to Itch.io" src="https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&amp;logo=Itch.io&amp;logoColor=white"></a>
-      <a href="https://github.com/ollielynas"><img style=" border-radius: 0;" alt="Link to GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
-      
-    </div>
-    <div class="box" style="grid-row: 3/4;grid-column: 4/6; padding-left: 0.8em; padding-right: 0.8em;">
-      <a href="https://www.auckland.ac.nz/en/about-us/about-the-university.html"><img style=" border-radius: 0;" alt="Link to UOA" src="https://icons.auckland.ac.nz/assets/logos/uoa/horizontal/uoa_logo.svg"></a>      
-    </div>
-    <!-- <div class="box" style="grid-row: 3/4;grid-column: 4/6; padding-left: 0.8em; padding-right: 0.8em;">
-      <iframe class="itch-io-iframe" href = "https://duckduckgo.com/?q=!ducky+4+site%3Aollie-lynas.itch.io/"></iframe>
-    </div> -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
-    <!-- <div class="box" style="grid-row: 3/5;grid-column: 6/7; padding-left: 0.8em; padding-right: 0.8em;">
-      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ollie-lynas-75b074294" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://nz.linkedin.com/in/ollie-lynas-75b074294?trk=profile-badge">Ollie Lynas</a></div>
-    </div> -->
-    </div>
-    </div>
-    
-
+  </div>
+</div>
+<i class="ph ph-caret-double-down"></i>
+</div>
+<div class="projects">
+  <div class="project">
+    more stuff coming whenever I get around to it...
+  </div>
+</div>
+</object>
 </body>
 </html>
