@@ -6,11 +6,24 @@
     position: fixed;
     color: white;
     left: 0.3em;
-    right: 0.3em;
-    font-family: "IBM Plex Mono", serif;
-    opacity: 1;
+    /* right: 95vw; */
     transition: all 1s;
+    font-family: "IBM Plex Mono", serif;
+    right: 0.3em;
+    /* animation: fadein 2s; */
 }
+
+@keyframes fadein {
+    from { 
+        /* opacity: 0;  */
+        right: 95vw;
+    }
+    to   {
+        /* opacity: 1;  */
+        right: 0.3em;
+    }
+}
+
 
 /* Inner container styles */
 .scrolling-text-inner {

@@ -4,50 +4,43 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>404</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='banner.css'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-    <style>
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        font-family: 'Fira Code', monospace;
-    flex-direction: column;
-}
+    <div class="scrolling-text-container"  >
+        <div class="scrolling-text-inner" style="--marquee-speed: 50s; --direction:scroll-left" role="marquee">
+            <div id="scrolling-text" class="scrolling-text">
+                <div class="scrolling-text-item">404</div>
+                <div class="scrolling-text-item">page not found</div>
+                <div class="scrolling-text-item">404</div>
+                <div class="scrolling-text-item">page not found</div>
+                <div class="scrolling-text-item">404</div>
+                <div class="scrolling-text-item">page not found</div>
 
-.container1 {
-    display: flex;
-    padding: 1em;
-    border: 1px rgba(87, 87, 87, 0.563) solid;
-    margin: 2em;
-    border-radius: 1em;
-    background-color: rgba(245, 245, 220, 0.345);
-    justify-content: left;
-    max-height: 40vh;
-    flex-direction: column;
-}
+            </div>
+        </div>
+        <script>
+          let el = document.getElementById("scrolling-text");
+          let l =  el.childNodes.length;
+          for (let i = 0; i < l*3; i++) {
+            let a = el.childNodes[i].cloneNode(true);
+            el.appendChild(a);
+          }
+        </script>
+    </div>
+    <div class="content">
+        <div class="row">
+        <div class="title">
+          <h1>Page Not Found</h1>
+      </div>
+      <a href="/" style="color: rgb(87, 87, 87);"><h1>home</h1></a>
+    </div>
+    <!-- <i class="ph ph-caret-double-down"></i> -->
+    </div>
 
+    <script src="404.js"></script>
 
-    </style>
-    <h1>404</h1>
-    <br>
-    <p class="ital">could not find: </p><a id = "link-me"></a>
-    <div class = "container1">
-        Perhaps you meant one of these
-        <a href="https://ollielynas.github.io">https://ollielynas.github.io</a>
-        <a href="https://ollielynas.github.io/md-website/">.../md-website</a>
-        <a href="https://ollielynas.github.io/password-game-clone/">.../password-game-clone/</a>
-        <a href="https://ollielynas.github.io/Fortran-1/">.../Fortran-1/</a>
-     </div>
-
-<script>
-    let l = document.getElementById("link-me");
-    l.innerText = window.location.href;
-    l.setAttribute("href", window.location.href);
-</script>
 </body>
 </html>
