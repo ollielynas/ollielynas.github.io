@@ -6,11 +6,31 @@
   <title>Ollie Lynas</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='banner.css'>
   <!-- <script src='main.js'></script> -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
+  <div class="scrolling-text-container">
+    <div class="scrolling-text-inner" style="--marquee-speed: 50s; --direction:scroll-left" role="marquee">
+        <div id="scrolling-text" class="scrolling-text">
+            <div class="scrolling-text-item">Software Engineer</div>
+            <div class="scrolling-text-item">Uni Student</div>
+            <div class="scrolling-text-item">Game Developer</div>
+            <div class="scrolling-text-item">Esolang Enjoyer</div>
+        </div>
+    </div>
+    <script>
+      let el = document.getElementById("scrolling-text");
+      let l =  el.childNodes.length;
+      for (let i = 0; i < l*3; i++) {
+        let a = el.childNodes[i].cloneNode(true);
+        el.appendChild(a);
+      }
+    </script>
+</div>
   <div class="content">
+    <div id="top" style="color: rgba(255, 255, 255, 0);" tabindex="-1">xxx</div>
     <div class="row">
     <div class="title">
       <h1>Ollie Lynas</h1>
@@ -26,11 +46,17 @@
 </div>
 <i class="ph ph-caret-double-down"></i>
 </div>
-<div class="projects">
-  <div class="project">
-    more stuff coming whenever I get around to it...
+<div class="items">
+  <div class = "row resume">
+    <h1 id="resume">resume</h1>
+    <div class="pdf-image">
+    <a class="ph ph-file-pdf" href="/White Clean Minimalist Resume.pdf">
+    </a>
+    <img class="pdf" src="/White Clean Minimalist Resume.jpg">
   </div>
 </div>
+</div>
 </object>
+<script src="main.js"></script>
 </body>
 </html>

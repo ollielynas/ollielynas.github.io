@@ -1,0 +1,60 @@
+/* Container styles */
+.scrolling-text-container {
+    background-color: #000000;
+    border-radius: 4px;
+    overflow: hidden;
+    position: fixed;
+    color: white;
+    left: 0.3em;
+    right: 0.3em;
+    font-family: "IBM Plex Mono", serif;
+    opacity: 1;
+    transition: all 1s;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+body[top="false"] .scrolling-text-container {
+    opacity: 0;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

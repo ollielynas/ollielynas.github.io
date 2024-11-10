@@ -1,83 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bigshot+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 body {
-    overflow-y: scroll;
-
+  overflow-y: scroll;
 }
 
 .content {
+  margin-left: 10vw;
+  width: 80vw;
+  height: 100vh;
+}
+
+.items {
     margin-left: 10vw;
     width: 80vw;
-    height: 100vh;
+    display: flex;
 }
 
 .title {
-    font-size: 5vw;
-    width: 50%;
+  font-size: 5vw;
+  width: 50%;
+}
+
+h1 {
+    font-family: "IBM Plex Mono", serif;
 }
 
 .title h1 {
-    font-family: "Bigshot One", serif;
+  font-family: "Bigshot One", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 90vh;
+  width: 100%;
 }
 
-
-
-
-    
+.resume {
+    height: 100vh;
+}
 
 .ph {
-    text-decoration: none;
-    color: #303030;
+  text-decoration: none;
+  color: #303030;
 }
 .links {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 3em;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3em;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 30vw;
 }
 
 .ph-caret-double-down {
-    display:inline-block;
-    width: 100%;
-    height: 10vh !important;
-    font-size: 6vh;
-    text-align: center;
-    transition: opacity 1s;
+  display: inline-block;
+  width: 100%;
+  height: 10vh !important;
+  font-size: 6vh;
+  text-align: center;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+body[top="true"] .ph-caret-double-down {
+    opacity: 1;
+    translate: 0 -20%;
 }
 
 .project {
-    font-size: 2em;
-    margin-left: 20vw;
+  font-size: 2em;
+  margin-left: 20vw;
+}
+.pdf-image {
+    display: flex;
+    position: relative;;
+}
+.pdf-image:hover .ph-file-pdf {
+    opacity: 1;
+    display: block;
 }
 
-@media all and (orientation:portrait) {
-    /* Style adjustments for portrait mode goes here */
-    
-.row {
+.pdf {
+  width: 30vw;
+  /* height: fit-content; */
+  /* height: 72vw; */
+}
+
+.ph-file-pdf {    
+    left: 0.3em;
+    top: 0.3em;
+    font-size: 2em;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    transition: linear 0.5s opacity;
+}
+
+
+
+
+@media all and (orientation: portrait) {
+  /* Style adjustments for portrait mode goes here */
+  .pdf {
+    width: 70vw;
+    height: max-content;
+  }
+  .row {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
-}
-.links {
+  }
+  .links {
     width: 80vw;
-}
-.title {
+  }
+  .title {
     font-size: 12vw;
     width: 80%;
+  }
 }
-    }
-    
