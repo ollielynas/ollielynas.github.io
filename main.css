@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 body {
   overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.2em;
 }
 
 .content {
@@ -14,6 +17,7 @@ body {
     margin-left: 10vw;
     width: 80vw;
     display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -49,6 +53,7 @@ h1 {
   text-decoration: none;
   color: #303030;
 }
+
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -59,6 +64,14 @@ h1 {
   width: 30vw;
 }
 
+.links > a {
+  transition: all 0.4s;
+
+}
+.links > a:hover {
+  translate: 0 -10%;
+}
+
 .ph-caret-double-down {
   display: inline-block;
   width: 100%;
@@ -67,6 +80,32 @@ h1 {
   text-align: center;
   transition: all 0.5s linear;
   opacity: 0;
+}
+
+.bottom {
+  position: static;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+  background-color: black;
+  display: flex;
+  color: white;
+  padding-left: 7vw;
+  font-size: 1.0em;
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 300;
+}
+
+.more-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+}
+
+.more-links a * , .more-links * {
+  font-size: 1.0;
+  fill: white;
+  color: rgb(230, 230, 230);
 }
 
 body[top="true"] .ph-caret-double-down {
@@ -94,13 +133,12 @@ body[top="true"] .ph-caret-double-down {
 }
 
 .ph-file-pdf {    
+  transition: all 0.2s;
     left: 0.3em;
     top: 0.3em;
     font-size: 2em;
     position: absolute;
     opacity: 0;
-    display: none;
-    transition: linear 0.5s opacity;
 }
 
 
