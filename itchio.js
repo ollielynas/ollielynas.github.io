@@ -71,11 +71,13 @@
 
     let image = images[Math.floor(Math.min(Math.random() * 4, 3))];
     let image_link = "";
+    let click_link = "";
       let i = Math.min(
         Math.floor(Math.random() * links.length),
         links.length - 1
       );
       image_link = links[i]["img"];
+      click_link = links[i]["link"];
       let valid = true;
       for (let image2 of images) {
         
@@ -91,6 +93,7 @@
       setTimeout(() => {
         preloadImageItchIo(image_link).then((a) => {
           image.src = image_link;
+          image.parentElement.href = click_link;
           image.style.opacity = 1;
         });
       }, 500);
