@@ -135,28 +135,16 @@ body[top="true"] .ph-caret-double-down {
 .pdf-image {
     display: flex;
     position: relative;
-    height: min-content;
-    padding-left: 0;
-}
-.pdf-image:hover .ph-file-pdf {
-    opacity: 1;
-    display: block;
+    width: 50vw
 }
 
+
 .pdf {
-  width: 30vw;
-  /* height: fit-content; */
+  /* width: 20vw; */
+  width: 40%;
   /* height: 72vw; */
 }
 
-.ph-file-pdf {    
-  transition: all 0.2s;
-    left: 0.3em;
-    top: 0.3em;
-    font-size: 2em;
-    position: absolute;
-    opacity: 0;
-}
 
 .images-grid {
   max-width: 40vw;
