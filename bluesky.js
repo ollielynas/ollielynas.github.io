@@ -7,37 +7,107 @@ fetch("https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=olliel
     update_image();
 
     setInterval(() => {
-        document.getElementById("bluesky_img").style.opacity = 0;
-        setTimeout(() => {
+
             update_image();
-            
-        }, 500)
-    }, 7000)
+
+    }, 5000)
 
   })
-.catch(err => console.log(err));
+.catch(err => {
+  fetch("./bluesky_backup.json")
+.then(res => res.json())
+.then(out =>
+  {
+    console.log("used backup");
+      window.bluesky_response = out;
+    update_image();
+
+    setInterval(() => {
+
+            update_image();
+
+    }, 3000)
+
+  })
+.catch(err => {
+});
+});
 
 
 function update_image() {
     let out = window.bluesky_response;
     let l = out["feed"].length;
-    let i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
 
 
+    let images = [
+      document.getElementById("bluesky_img1"),
+      document.getElementById("bluesky_img2"),
+      document.getElementById("bluesky_img3"),
+      document.getElementById("bluesky_img4"),
+    ];
 
-   let link = out["feed"][i]["post"]["embed"]["images"][0]["fullsize"];
+        let picked = [];
+
+        let updated_images = false;
+
+       for (let image of images) {
+      if (image.src !="") {
+        continue;
+      }
+
+      updated_images = true;
+      
+      let link = "";
+      while (true) {
+            let i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
+          link = out["feed"][i]["post"]["embed"]["images"][0]["fullsize"];
+
+        let valid = true;
+        for (let image2 of picked) {
+          if (image2 == link) {
+            valid = false;
+          }
+        }
+        if (valid) {
+          break;
+        }
+      }
+      if (link !== undefined) {
+        preloadImageBluesky(link).then((a) => {
+          image.src = link;
+          image.style.opacity = 1;
+        });
+      }
+    }
 
 
+    if (updated_images) {return;}
+
+    
+    let image = images[Math.floor(Math.min(Math.random() * 4, 3))];
+    let link = "";
+                  let i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
+
+      link = out["feed"][i]["post"]["embed"]["images"][0]["fullsize"];
+
+      let valid = true;
+      for (let image2 of images) {
+        if (image2.src == link && link !== undefined) {
+         return
+        }
+      }
+      
 
 
    if (link !== undefined) {
-    preloadImageBluesky(link).then(
-        a => {
-            document.getElementById("bluesky_img").src = link;
-            document.getElementById("bluesky_img").style.opacity = 1;
-        }
-    )
-   }
+      image.style.opacity = 0;
+      setTimeout(() => {
+        preloadImageBluesky(link).then((a) => {
+          image.src = link;
+          image.style.opacity = 1;
+        });
+      }, 500);
+    }
 }
 
 

@@ -175,19 +175,30 @@ body[top="true"] .ph-caret-double-down {
   padding: 0.5em;
 }
 
-#bluesky_img, #project_img {
-  max-width: 40vw;
-  max-height: 80vh;
-  transition: opacity 0.5s, visibility 0.5s ease-in-out;
+.bluesky_img, .project_img {
+  max-width: 25vw;
+  max-height: 40vh;
+  transition: all 0.5s, opacity 0.5s, visibility 0.5s ease-in-out;
   padding: 0.5em;
 }
 
+
+
+.bsk_container div, .project_container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transition: all 0.5s ease;
+}
 .bsk_container, .project_container {
   min-width: 50vw;
   min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
 }
 
 
@@ -211,6 +222,7 @@ a img:hover {
     height: fit-content;
     min-height: 90vh;
     padding: 1em;
+
   }
 
   .row * {
@@ -220,9 +232,10 @@ a img:hover {
     order: 0;
   }
 
-  #bluesky_img, #project_img {
-  max-width: 60vw;
-  max-height: 80vh;
+
+  .bluesky_img, .project_img {
+  max-width: 30vw;
+  max-height: 40vh;
 }
 
 
