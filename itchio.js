@@ -8,6 +8,9 @@ const links = [
     },
     {link: "https://ollie-lynas.itch.io/quantum-chess", 
         img: "https://img.itch.zone/aW1hZ2UvMTk4ODYwMy8xMjIwNjU4Ny5wbmc=/original/skQf1C.png"
+    },
+    {link: "https://activity.ollielynas.com", 
+        img: "./activity_book2.png"
     }
 ]
 
