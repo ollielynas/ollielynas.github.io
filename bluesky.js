@@ -1,5 +1,4 @@
 
-
 fetch("https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ollielynas.com&limit=50")
 .then(res => res.json())
 .then(out =>
@@ -13,7 +12,7 @@ fetch("https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=olliel
             update_image();
             
         }, 500)
-    }, 10000)
+    }, 7000)
 
   })
 .catch(err => console.log(err));
@@ -32,7 +31,7 @@ function update_image() {
 
 
    if (link !== undefined) {
-    preloadImage(link).then(
+    preloadImageBluesky(link).then(
         a => {
             document.getElementById("bluesky_img").src = link;
             document.getElementById("bluesky_img").style.opacity = 1;
@@ -42,11 +41,11 @@ function update_image() {
 }
 
 
-
-const preloadImage = src => 
+const preloadImageBluesky = src => 
   new Promise((resolve, reject) => {
     const image = new Image()
     image.onload = resolve
     image.onerror = reject
     image.src = src
   })
+

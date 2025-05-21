@@ -175,14 +175,14 @@ body[top="true"] .ph-caret-double-down {
   padding: 0.5em;
 }
 
-#bluesky_img {
-  max-width: 50vw;
+#bluesky_img, #project_img {
+  max-width: 40vw;
   max-height: 80vh;
   transition: opacity 0.5s, visibility 0.5s ease-in-out;
   padding: 0.5em;
 }
 
-.bsk_container {
+.bsk_container, .project_container {
   min-width: 50vw;
   min-height: 80vh;
   display: flex;
@@ -212,6 +212,20 @@ a img:hover {
     min-height: 90vh;
     padding: 1em;
   }
+
+  .row * {
+    order: 1;
+  }
+  .row h1 {
+    order: 0;
+  }
+
+  #bluesky_img, #project_img {
+  max-width: 60vw;
+  max-height: 80vh;
+}
+
+
   .links {
     width: 80vw;
   }
