@@ -20,11 +20,14 @@ fetch("https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=olliel
   {
     console.log("used backup");
       window.bluesky_response = out;
-    update_image();
+    try{update_image()}catch (e){};
 
     setInterval(() => {
-
+        try {
             update_image();
+          } catch (e) {
+            console.log(e);
+          }
 
     }, 3000)
 
@@ -58,8 +61,9 @@ function update_image() {
       updated_images = true;
       
       let link = "";
+      let i = 0;
       while (true) {
-            let i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
+            i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
           link = out["feed"][i]["post"]["embed"]["images"][0]["fullsize"];
 
         let valid = true;
@@ -76,6 +80,9 @@ function update_image() {
         preloadImageBluesky(link).then((a) => {
           image.src = link;
           image.style.opacity = 1;
+                let bsk_link = "https://bsky.app/profile/ollielynas.com/post/"+out["feed"][i]["post"]["uri"].split(".post/")[1];
+
+          image.parentElement.href = bsk_link;
         });
       }
     }
@@ -86,10 +93,10 @@ function update_image() {
     
     let image = images[Math.floor(Math.min(Math.random() * 4, 3))];
     let link = "";
-                  let i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
+      let i = Math.floor(Math.min((Math.random() * (l - 1)), (Math.random() * (l - 1))));
 
       link = out["feed"][i]["post"]["embed"]["images"][0]["fullsize"];
-
+      console.log(out["feed"][i]["post"]);
       let valid = true;
       for (let image2 of images) {
         if (image2.src == link && link !== undefined) {
@@ -105,6 +112,9 @@ function update_image() {
         preloadImageBluesky(link).then((a) => {
           image.src = link;
           image.style.opacity = 1;
+                let bsk_link = "https://bsky.app/profile/ollielynas.com/post/"+out["feed"][i]["post"]["uri"].split(".post/")[1];
+
+          image.parentElement.href = bsk_link;
         });
       }, 500);
     }
