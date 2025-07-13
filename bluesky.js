@@ -80,9 +80,9 @@ function update_image() {
         preloadImageBluesky(link).then((a) => {
           image.src = link;
           image.style.opacity = 1;
-                let bsk_link = "https://bsky.app/profile/ollielynas.com/post/"+out["feed"][i]["post"]["uri"].split(".post/")[1];
+                // let bsk_link = "https://bsky.app/profile/ollielynas.com/post/"+out["feed"][i]["post"]["uri"].split(".post/")[1];
 
-          image.parentElement.href = bsk_link;
+          image.parentElement.href = "";
         });
       }
     }

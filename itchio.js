@@ -12,8 +12,12 @@
       link: "https://ollie-lynas.itch.io/quantum-chess",
       img: "https://img.itch.zone/aW1hZ2UvMTk4ODYwMy8xMjIwNjU4Ny5wbmc=/original/skQf1C.png",
     },
+
     { link: "https://activity.ollielynas.com", img: "./activity_book2.png" },
+
     { link: "https://ollie-lynas.itch.io/casio-basic-visual", img: "https://img.itch.zone/aW1hZ2UvMjA3NjIzNS8xMjIxMjcyMS5wbmc=/794x1000/qdV9yq.png" },
+
+    { link: "https://ollie-lynas.itch.io/scrapbook-creatures", img: "https://img.itch.zone/aW1nLzIxNTkyMzE2LnBuZw==/original/r2%2BeI7.png" },
   ];
   
   setInterval(() => {

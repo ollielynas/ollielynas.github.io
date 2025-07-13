@@ -208,7 +208,7 @@ a img:hover {
     align-items: center;
     justify-content: space-around;
     height: fit-content;
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 1em;
 
   }
